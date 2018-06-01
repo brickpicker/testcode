@@ -40,11 +40,13 @@
 	<script src="http://bp-mvc.brickpicker.com/global_assets/js/plugins/forms/styling/uniform.min.js"></script>
 	<script src="http://bp-mvc.brickpicker.com/global_assets/js/plugins/forms/selects/select2.min.js"></script>
 	<script src="http://bp-mvc.brickpicker.com/global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script src="http://bp-mvc.brickpicker.com/global_assets/js/plugins/tables/footable/footable.min.js"></script>
 	<script src="http://bp-mvc.brickpicker.com/global_assets/js/plugins/sliders/nouislider.min.js"></script>
 	
 	<!-- Theme JS files -->
 	<script src="http://bp-mvc.brickpicker.com/global_assets/js/plugins/visualization/d3/d3.min.js"></script>
 	<script src="http://bp-mvc.brickpicker.com/global_assets/js/plugins/visualization/dimple/dimple.min.js"></script>
+	<script src="http://bp-mvc.brickpicker.com/global_assets/js/demo_pages/table_responsive.js"></script>
 	<script src="http://bp-mvc.brickpicker.com/assets/js/app.js"></script>
 	
 	<!-- Final Tiles Grid Gallery script --> 
@@ -55,13 +57,13 @@
 	<link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
 </head>
 
-<body class="sidebar-xs">
+<body class="sidebar-right-visible sidebar-xs">
 
 
 
 	
-	<div class="navbar navbar-expand-md bg-grey-800 navbar-dark">
-		<div class="container px-0">
+	<div class="navbar navbar-expand-md bg-grey-800 navbar-dark px-0">
+        <div class="container">
 			<div class="navbar-brand wmin-0 mr-5">
 				<a href="/index.cfm" class="d-inline-block">
 					<img src="http://bp-mvc.brickpicker.com/assets/images/brickpicker_logo_white-main.png" class="logo" alt="BrickPicker Logo">
@@ -73,8 +75,8 @@
 
 
 	<!-- Secondary navbar -->
-	<div class="navbar navbar-expand-md navbar-light">
-		<div class="container px-0">
+	<div class="navbar navbar-expand-md navbar-light px-0">
+		<div class="container position-relative">
 			<div class="text-center d-md-none w-100">
 				<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-navigation">
 					<i class="icon-unfold mr-2"></i>
@@ -398,8 +400,8 @@
 				
 <!-- Page header -->
 <div class="page-header px-0">
-	<div class="page-header-content header-elements-md-inline">
-		<div class="container header-elements-md-inline px-0">
+	<div class="page-header-content header-elements-md-inline px-0">
+		<div class="container header-elements-md-inline">
 			<div class="page-title d-flex">
 				<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">LEGO Price Guide: 75192-1 Millennium Falcon</span></h4>
 				<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
@@ -408,16 +410,8 @@
 			<div class="header-elements d-none">
 				<div class="d-flex justify-content-center">
 					<a href="#" class="btn btn-link btn-float font-size-sm font-weight-semibold text-default">
-						<i class="icon-bars-alt text-pink-300"></i>
+						<i class="icon-bars-alt text-orange-600"></i>
 						<span>Statistics</span>
-					</a>
-					<a href="#" class="btn btn-link btn-float font-size-sm font-weight-semibold text-default">
-						<i class="icon-calculator text-pink-300"></i>
-						<span>Invoices</span>
-					</a>
-					<a href="#" class="btn btn-link btn-float font-size-sm font-weight-semibold text-default">
-						<i class="icon-calendar5 text-pink-300"></i>
-						<span>Schedule</span>
 					</a>
 				</div>
 			</div>
@@ -432,26 +426,16 @@
 					<a href="/priceguide/sets/star-wars" class="breadcrumb-item">Star Wars</a>
 					<span class="breadcrumb-item active">75192-1 Millennium Falcon</span>
 				</div>
-	
-				<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- /page header -->		
-<!-- Page content -->
-	<div class="page-content container pt-0">
+<!-- /page header -->	
 
-		<!-- Main content -->
-		<div class="content-wrapper">
-
-			<!-- Content area -->
-			<div class="content">
 	
-			
-			
-				<div class="card px-5">									
-					<div class="owl-carousel owl-theme">
+				<div class="container">
+					<div class="card px-5 mx-2">
+						<div class="owl-carousel owl-theme">
 						
 					    	<div class="item">
 						    	<a href="https://img.brickpicker.com/brickpicker_set_75192-1_20.jpg" data-popup="lightbox" rel="gallery">
@@ -651,59 +635,51 @@
 						    	</a>
 						    </div>
 						
-					</div>				
+						</div>				
+					</div>
 				</div>
-			
-			
+				
+	
+<!-- Page content -->
+	<div class="page-content container pt-0">
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Content area -->
+			<div class="content">
+	
+				
 
 				
-			<!-- Inner container -->
-			<div class="d-flex align-items-start flex-column flex-md-row">
-
-				<!-- Left content -->
-				<div class="w-100 overflow-auto order-2 order-md-1">
 					
-					<!-- Marketing campaigns -->
+					<!-- Secondary Market Values -->
 					<div class="card">
 						<div class="card-header bg-orange-400 text-white header-elements-inline">
 							<h6 class="card-title">Current Secondary Market Values</h6>							
 						</div>
 						
-						<div class="table-responsive">
-							<table class="table text-nowrap">
+						
+							<table class="table table-togglable table-hover">
 								<thead>
 									<tr>
 										<th></th>
+										<th data-toggle="true">Region</th>
 										<th>New Value</th>
-										<th>New Change</th>
+										<th data-hide="phone">New Change</th>
 										<th>Used Value</th>
-										<th>Used Change</th>
-										<th>PPP</th>
+										<th data-hide="phone">Used Change</th>
+										<th data-hide="phone">PPP</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr class="table-active table-border">
-										<td class="text-left"><img src="http://bp-mvc.brickpicker.com/assets/images/logos/brickpicker-solo-words.png" style="max-height: 25px;" ></td>
-										<td colspan="5"></td>
+										<td class="float-center" colspan="7"><img src="http://bp-mvc.brickpicker.com/assets/images/logos/brickpicker-solo-words.png" style="max-height: 25px;" ></td>
 									</tr>
 									
 									<tr>
-										<td>
-											<div class="d-flex align-items-center">
-												<div class="mr-3">
-													<a href="#">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/large/flag_usa.png" class="rounded-circle" width="32" height="32" alt="">
-													</a>
-												</div>
-												<div>
-													<a href="#" class="text-default font-weight-semibold">United States</a>
-													<div class="text-muted font-size-sm">
-														<span class="badge badge-mark border-blue mr-1"></span>
-														02:00 - 03:00
-													</div>
-												</div>
-											</div>
-										</td>
+										<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/large/flag_usa.png" class="rounded-circle" width="32" height="32" alt=""></td>
+										<td><span class="text-default font-weight-semibold">United States</span></td>
 										<td><h6 class="mb-0 text-semibold">$1,022.96</h6></td>
 										<td><span class="text-danger-600"><i class="icon-stats-decline2 position-left"></i> -5.61%</span></td>
 										<td><h6 class="mb-0 text-semibold">$1,001.20</h6></td>
@@ -714,22 +690,8 @@
 									
 									
 									<tr>
-										<td>
-											<div class="d-flex align-items-center">
-												<div class="mr-3">
-													<a href="#">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/large/flag_britain.png" class="rounded-circle" width="32" height="32" alt="">
-													</a>
-												</div>
-												<div>
-													<a href="#" class="text-default font-weight-semibold">United Kingdom</a>
-													<div class="text-muted font-size-sm">
-														<span class="badge badge-mark border-blue mr-1"></span>
-														02:00 - 03:00
-													</div>
-												</div>
-											</div>
-										</td>
+										<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/large/flag_britain.png" class="rounded-circle" width="32" height="32" alt=""></td>
+										<td><span class="text-default font-weight-semibold">United Kingdom</span></td>
 										<td><h6 class="mb-0 text-semibold">&pound; 798.07</h6></td>
 											<td><span class="text-danger-600"><i class="icon-stats-decline2 position-left"></i> -9.62%</span></td>
 											<td><h6 class="mb-0 text-semibold">&pound; 805.70</h6></td>
@@ -740,22 +702,8 @@
 									
 									
 									<tr>
-										<td>
-											<div class="d-flex align-items-center">
-												<div class="mr-3">
-													<a href="#">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/large/flag_canada.png" class="rounded-circle" width="32" height="32" alt="">
-													</a>
-												</div>
-												<div>
-													<a href="#" class="text-default font-weight-semibold">Canada</a>
-													<div class="text-muted font-size-sm">
-														<span class="badge badge-mark border-blue mr-1"></span>
-														02:00 - 03:00
-													</div>
-												</div>
-											</div>
-										</td>
+										<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/large/flag_canada.png" class="rounded-circle" width="32" height="32" alt=""></td>
+										<td><span class="text-default font-weight-semibold">Canada</span></td>
 										<td><h6 class="mb-0 text-semibold">$1,174.87</h6></td>
 										<td><span class="text-danger-600"><i class="icon-stats-decline2 position-left"></i> -4.19%</span></td>
 										<td><h6 class="mb-0 text-semibold">$1,227.48</h6></td>
@@ -766,22 +714,8 @@
 									
 									
 									<tr>
-										<td>
-											<div class="d-flex align-items-center">
-												<div class="mr-3">
-													<a href="#">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/large/flag_european.png" class="rounded-circle" width="32" height="32" alt="">
-													</a>
-												</div>
-												<div>
-													<a href="#" class="text-default font-weight-semibold">Europe</a>
-													<div class="text-muted font-size-sm">
-														<span class="badge badge-mark border-blue mr-1"></span>
-														02:00 - 03:00
-													</div>
-												</div>
-											</div>
-										</td>
+										<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/large/flag_european.png" class="rounded-circle" width="32" height="32" alt=""></td>
+										<td><span class="text-default font-weight-semibold">Europe</span></td>
 										<td><h6 class="mb-0 text-semibold">$ 901.05</h6></td>
 										<td><span class="text-danger-600"><i class="icon-stats-decline2 position-left"></i> -4.94%</span></td>
 										<td><h6 class="mb-0 text-semibold">$1,001.20</h6></td>
@@ -792,20 +726,8 @@
 									
 									
 									<tr>
-										<td>
-											<div class="d-flex align-items-center">
-												<div class="mr-3">
-													<img src="http://bp-mvc.brickpicker.com/assets/images/flags/large/flag_australia.png" class="rounded-circle" width="32" height="32" alt="">
-												</div>
-												<div>
-													<a href="#" class="text-default font-weight-semibold">Australia</a>
-													<div class="text-muted font-size-sm">
-														<span class="badge badge-mark border-blue mr-1"></span>
-														02:00 - 03:00
-													</div>
-												</div>
-											</div>
-										</td>
+										<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/large/flag_australia.png" class="rounded-circle" width="32" height="32" alt=""></td>
+										<td><span class="text-default font-weight-semibold">Australia</span></td>
 										<td><h6 class="mb-0 text-semibold">$1,276.25</h6></td>
 										<td><span class="text-danger-600"><i class="icon-stats-decline2 position-left"></i> -8.05%</span></td>
 										<td><h6 class="mb-0 text-semibold">$1,001.20</h6></td>
@@ -815,28 +737,15 @@
 									</tr>
 									
 									<tr class="table-active table-border">
-										<td class="media-left"><img src="http://bp-mvc.brickpicker.com/assets/images/logos/bl_logo-horizontal.svg" style="max-height: 25px;" ></td>
-										<td colspan="5"></td>
+										<td colspan="7"><img src="http://bp-mvc.brickpicker.com/assets/images/logos/bl_logo-horizontal.png" style="max-height: 25px;" ></td>
 									</tr>
 									
 									
 									
 										<!-- bricklink DE values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/DE.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">DE Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/DE.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">DE Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$1,040.39</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -846,20 +755,8 @@
 										
 										<!-- bricklink RU values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/RU.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">RU Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/RU.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">RU Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$1,022.99</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -869,20 +766,8 @@
 										
 										<!-- bricklink BE values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/BE.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">BE Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/BE.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">BE Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$1,015.70</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -892,20 +777,8 @@
 										
 										<!-- bricklink HK values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/HK.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">HK Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/HK.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">HK Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$1,048.25</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -915,20 +788,8 @@
 										
 										<!-- bricklink FI values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/FI.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">FI Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/FI.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">FI Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$1,005.17</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -938,20 +799,8 @@
 										
 										<!-- bricklink FR values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/FR.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">FR Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/FR.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">FR Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$1,125.70</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -961,20 +810,8 @@
 										
 										<!-- bricklink HU values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/HU.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">HU Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/HU.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">HU Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$ 962.18</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -984,20 +821,8 @@
 										
 										<!-- bricklink SG values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/SG.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">SG Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/SG.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">SG Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$1,150.00</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -1007,20 +832,8 @@
 										
 										<!-- bricklink UK values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/UK.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">UK Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/UK.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">UK Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$1,088.74</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$1,050.62</h6></td>
@@ -1030,20 +843,8 @@
 										
 										<!-- bricklink SI values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/SI.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">SI Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/SI.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">SI Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$1,045.36</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -1053,20 +854,8 @@
 										
 										<!-- bricklink US values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/US.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">US Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/US.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">US Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$ 973.42</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$ 807.00</h6></td>
@@ -1076,20 +865,8 @@
 										
 										<!-- bricklink CA values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/CA.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">CA Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/CA.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">CA Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$1,027.14</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -1099,20 +876,8 @@
 										
 										<!-- bricklink IT values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/IT.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">IT Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/IT.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">IT Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$1,083.79</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -1122,20 +887,8 @@
 										
 										<!-- bricklink AT values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/AT.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">AT Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/AT.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">AT Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$ 970.57</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -1145,20 +898,8 @@
 										
 										<!-- bricklink CZ values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/CZ.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">CZ Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/CZ.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">CZ Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$ 981.77</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -1168,20 +909,8 @@
 										
 										<!-- bricklink PL values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/PL.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">PL Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/PL.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">PL Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$ 849.58</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -1191,20 +920,8 @@
 										
 										<!-- bricklink NL values -->
 										<tr>
-											<td>
-												<div class="d-flex align-items-center">
-													<div class="mr-3">
-														<img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/NL.svg" class="rounded-circle" width="32" height="32" alt="">
-													</div>
-													<div>
-														<a href="#" class="text-default font-weight-semibold">NL Value</a>
-														<div class="text-muted font-size-sm">
-															<span class="badge badge-mark border-blue mr-1"></span>
-															02:00 - 03:00
-														</div>
-													</div>
-												</div>
-											</td>
+											<td><img src="http://bp-mvc.brickpicker.com/assets/images/flags/svg/NL.svg" class="rounded-circle" width="32" height="32" alt=""></td>
+											<td><span class="text-default font-weight-semibold">NL Value</span></td>
 											<td><h6 class="mb-0 text-semibold">$1,035.67</h6></td>
 											<td><span class="text-success-600"><i class="icon-stats-growth2 position-left"></i> 2.43%</span></td>
 											<td><h6 class="mb-0 text-semibold">$   0.00</h6></td>
@@ -1214,9 +931,9 @@
 										
 								</tbody>
 							</table>
-						</div>
+						
 					</div>
-					<!-- /marketing campaigns -->
+					<!-- /secondary market values -->
 
 
 					
@@ -1263,53 +980,52 @@
 							</div>
 						</div>
 
-						<div class="table-responsive">
-							<table class="table">
+						<table class="table table-togglable table-hover">
 								<thead>					
 									<tr>
-										<th style="width: 100px">Image</th>
-										<th style="width: 80px;">Vendor</th>
-										<th>Description</th>
-										<th class="text-center" style="width: 20px;"><i class="icon-arrow-down12"></i></th>
+										<th data-hide="phone">Image</th>
+										<th data-hide="phone">Vendor</th>
+										<th data-toggle="true">Description</th>
+										<th><i class="icon-arrow-down12"></i></th>
 									</tr>
 								</thead>
 								<tbody>
 									
 									<tr class="table-active table-border">
-										<td class="text-left"><img src="http://bp-mvc.brickpicker.com/assets/images/logos/brick_classifieds_logo.png" style="max-height: 20px;" ></td>
-										<td class="text-right" colspan="3">
+										<td class="text-left" colspan="3"><img src="http://bp-mvc.brickpicker.com/assets/images/logos/brick_classifieds_logo.png" style="max-height: 20px;" ></td>
+										<td class="text-right">
 											
 											<span class="badge bg-warning">0</span>
 										</td>
 									</tr>
 									<tr>
-										<td colspan="4"><span class="badge badge-danger ml-3">Sorry, there are no listings for this set on Brick Classifieds</span></td>
+										<td colspan="4"><span class="badge badge-danger ml-3 font-size-lg">Sorry, there are no listings for this set on Brick Classifieds</span></td>
 									</tr>
 									
 									<tr class="table-active table-border">
-										<td class="text-left"><img src="http://bp-mvc.brickpicker.com/assets/images/logos/ebay_logo.png" style="max-height: 35px;" ></td>
-										<td class="text-right" colspan="3">
+										<td class="text-left" colspan="3"><img src="http://bp-mvc.brickpicker.com/assets/images/logos/ebay_logo.png" style="max-height: 35px;" ></td>
+										<td class="text-right">
 											<span class="badge bg-warning">10</span>
 										</td>
 									</tr>
 									
 									<tr>
 										<td class="text-center">
-											<img src="http://thumbs4.ebaystatic.com/m/mW_jyEG5klg9N4T9UmQwVWA/140.jpg" class="img-responsive img-rounded media-preview" alt="">
+											<img src="http://thumbs1.ebaystatic.com/m/mfkcwuG12vU8RyLXjMdF9jg/140.jpg" class="img-responsive img-rounded media-preview" alt="">
 										</td>
 										<td>
 											<div class="media-body">
-												<a href="#" class="display-inline-block text-default text-semibold letter-icon-title">netsupsales1</a>
+												<a href="#" class="display-inline-block text-default text-semibold letter-icon-title">plethora_outlet</a>
 												<div class="text-muted text-size-small"><span class="badge bg-success">100%</span> <span class="badge bg-primary-700">US</span></div>
 											</div>
 										</td>
 										<td>
-											<a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&toolid=10041&campid=5336897130&customid=setsEBAY-US&lgeo=1&vectorid=229466&item=263725010279" target="_blank">
-												<span class="text-semibold">LEGO - 75192 - Star Wars - UCS Millennium Falcon  New Sealed Box - ready to ship</span>
+											<a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&toolid=10041&campid=5336897130&customid=setsEBAY-US&lgeo=1&vectorid=229466&item=282989866860" target="_blank">
+												<span class="text-semibold">Lego Star Wars Millennium Falcon Set 75192 Ultimate Collector Series</span>
 											</a>
 										</td>
 										<td class="text-center">
-											<a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&toolid=10041&campid=5336897130&customid=setsEBAY-US&lgeo=1&vectorid=229466&item=263725010279" class="btn btn-success" target="_blank"><i class=" icon-price-tag position-left"></i> 775.99</button>
+											<a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&toolid=10041&campid=5336897130&customid=setsEBAY-US&lgeo=1&vectorid=229466&item=282989866860" class="btn btn-success" target="_blank"><i class=" icon-price-tag position-left"></i> 750.00</button>
 										</td>
 									</tr>
 									
@@ -1415,6 +1131,26 @@
 									
 									<tr>
 										<td class="text-center">
+											<img src="http://thumbs1.ebaystatic.com/m/mYNE8-DdR3M1oOCxPyIsQmg/140.jpg" class="img-responsive img-rounded media-preview" alt="">
+										</td>
+										<td>
+											<div class="media-body">
+												<a href="#" class="display-inline-block text-default text-semibold letter-icon-title">sprials</a>
+												<div class="text-muted text-size-small"><span class="badge bg-success">100%</span> <span class="badge bg-primary-700">US</span></div>
+											</div>
+										</td>
+										<td>
+											<a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&toolid=10041&campid=5336897130&customid=setsEBAY-US&lgeo=1&vectorid=229466&item=173283576444" target="_blank">
+												<span class="text-semibold">LEGO Star Wars Millennium Falcon (75192) NEW UCS</span>
+											</a>
+										</td>
+										<td class="text-center">
+											<a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&toolid=10041&campid=5336897130&customid=setsEBAY-US&lgeo=1&vectorid=229466&item=173283576444" class="btn btn-success" target="_blank"><i class=" icon-price-tag position-left"></i> 880.00</button>
+										</td>
+									</tr>
+									
+									<tr>
+										<td class="text-center">
 											<img src="http://thumbs1.ebaystatic.com/m/mEjpNPoYc5wRfO-srOxOWVw/140.jpg" class="img-responsive img-rounded media-preview" alt="">
 										</td>
 										<td>
@@ -1473,30 +1209,10 @@
 										</td>
 									</tr>
 									
-									<tr>
-										<td class="text-center">
-											<img src="http://thumbs1.ebaystatic.com/m/mYNE8-DdR3M1oOCxPyIsQmg/140.jpg" class="img-responsive img-rounded media-preview" alt="">
-										</td>
-										<td>
-											<div class="media-body">
-												<a href="#" class="display-inline-block text-default text-semibold letter-icon-title">sprials</a>
-												<div class="text-muted text-size-small"><span class="badge bg-success">100%</span> <span class="badge bg-primary-700">US</span></div>
-											</div>
-										</td>
-										<td>
-											<a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&toolid=10041&campid=5336897130&customid=setsEBAY-US&lgeo=1&vectorid=229466&item=173283576444" target="_blank">
-												<span class="text-semibold">LEGO Star Wars Millennium Falcon (75192) NEW UCS</span>
-											</a>
-										</td>
-										<td class="text-center">
-											<a href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?ff3=2&toolid=10041&campid=5336897130&customid=setsEBAY-US&lgeo=1&vectorid=229466&item=173283576444" class="btn btn-success" target="_blank"><i class=" icon-price-tag position-left"></i> 910.00</button>
-										</td>
-									</tr>
-									
 									<tr class="table-active table-border">
-										<td class="text-left"><img src="http://bp-mvc.brickpicker.com/assets/images/logos/bl_logo-horizontal.svg" style="max-height: 35px;" ></td>
-										<td class="text-right" colspan="3">
-											<span class="badge bg-warning">251</span>
+										<td class="text-left" colspan="3"><img src="http://bp-mvc.brickpicker.com/assets/images/logos/bl_logo-horizontal.png" style="max-height: 35px;" ></td>
+										<td class="text-right">
+											<span class="badge bg-warning">261</span>
 										</td>
 									</tr>
 									
@@ -1510,13 +1226,13 @@
 											<td>
 												<div class="media-body">
 													<span class="display-inline-block text-default text-semibold letter-icon-title">Price Range</span>
-													<div class="text-muted text-size-small">$716.18 - $5,799.15</div>
+													<div class="text-muted text-size-small">$717.86 - $5,812.81</div>
 												</div>
 											</td>
 											<td>
 												<div class="media-body">
 													<span class="display-inline-block text-default text-semibold letter-icon-title">Total Quantity</span>
-													<div class="text-muted text-size-small">249</div>
+													<div class="text-muted text-size-small">259</div>
 												</div>
 											</td>
 											<td class="text-center">
@@ -1534,7 +1250,7 @@
 											<td>
 												<div class="media-body">
 													<span class="display-inline-block text-default text-semibold letter-icon-title">Price Range</span>
-													<div class="text-muted text-size-small">$850.22 - $863.18</div>
+													<div class="text-muted text-size-small">$850.51 - $865.21</div>
 												</div>
 											</td>
 											<td>
@@ -1550,24 +1266,20 @@
 										
 								</tbody>
 							</table>
-						</div>
+						
 					</div>
 					<!-- /support tickets -->
 					
-				
-			
-				</div>				
-					
-					
-					
-					
-					
-					
-					
-					
-				<!-- Right sidebar component -->
-				<div class="sidebar sidebar-light sidebar-component sidebar-component-right border-1 shadow-1 order-1 order-md-2 sidebar-expand-md">
+			</div>
+			<!-- /content area -->
 
+		</div>
+		<!-- /main content -->
+
+
+		<!-- Right sidebar component -->
+				<div class="sidebar sidebar-light sidebar-right sidebar-expand-md">
+		
 					<!-- Sidebar content -->
 						<div class="sidebar-content">
 
@@ -1709,301 +1421,15 @@
 								</div>
 							</div>
 							<!-- /Brickfolio value details -->
-
-
-							<!-- Assigned users -->
-							<div class="card">
-								<div class="card-header bg-transparent header-elements-inline">
-									<span class="text-uppercase font-size-sm font-weight-semibold">Assigned users</span>
-									<div class="header-elements">
-										<div class="list-icons">
-					                		<a class="list-icons-item" data-action="collapse"></a>
-				                		</div>
-			                		</div>
-								</div>
-
-								<div class="card-body">
-									<ul class="media-list">
-										<li class="media">
-											<a href="#" class="mr-3">
-												<img src="../../../../global_assets/images/demo/users/face11.jpg" width="36" height="36" class="rounded-circle" alt="">
-											</a>
-
-											<div class="media-body">
-												<div class="font-weight-semibold">Rebecca Jameson</div>
-												<span class="font-size-sm text-muted">Web developer</span>
-											</div>
-
-											<div class="ml-3 align-self-center">
-												<div class="dropdown">
-													<a href="#" class="text-default dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-more2"></i></a>
-													<div class="dropdown-menu dropdown-menu-right">
-														<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Start chat</a>
-														<a href="#" class="dropdown-item"><i class="icon-phone2"></i> Make a call</a>
-														<a href="#" class="dropdown-item"><i class="icon-mail5"></i> Send mail</a>
-														<div class="dropdown-divider"></div>
-														<a href="#" class="dropdown-item"><i class="icon-stars"></i> Rate trainer</a>
-													</div>
-												</div>
-											</div>
-										</li>
-
-										<li class="media">
-											<a href="#" class="mr-3">
-												<img src="../../../../global_assets/images/demo/users/face25.jpg" width="36" height="36" class="rounded-circle" alt="">
-											</a>
-
-											<div class="media-body">
-												<div class="font-weight-semibold">Walter Sommers</div>
-												<span class="font-size-sm text-muted">Lead developer</span>
-											</div>
-
-											<div class="ml-3 align-self-center">
-												<div class="dropdown">
-													<a href="#" class="text-default dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-more2"></i></a>
-													<div class="dropdown-menu dropdown-menu-right">
-														<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Start chat</a>
-														<a href="#" class="dropdown-item"><i class="icon-phone2"></i> Make a call</a>
-														<a href="#" class="dropdown-item"><i class="icon-mail5"></i> Send mail</a>
-														<div class="dropdown-divider"></div>
-														<a href="#" class="dropdown-item"><i class="icon-stars"></i> Rate trainer</a>
-													</div>
-												</div>
-											</div>
-										</li>
-
-										<li class="media">
-											<a href="#" class="mr-3">
-												<img src="../../../../global_assets/images/demo/users/face10.jpg" width="36" height="36" class="rounded-circle" alt="">
-											</a>
-
-											<div class="media-body">
-												<div class="font-weight-semibold">Otto Gerwald</div>
-												<span class="font-size-sm text-muted">Front end developer</span>
-											</div>
-
-											<div class="ml-3 align-self-center">
-												<div class="dropdown">
-													<a href="#" class="text-default dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-more2"></i></a>
-													<div class="dropdown-menu dropdown-menu-right">
-														<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Start chat</a>
-														<a href="#" class="dropdown-item"><i class="icon-phone2"></i> Make a call</a>
-														<a href="#" class="dropdown-item"><i class="icon-mail5"></i> Send mail</a>
-														<div class="dropdown-divider"></div>
-														<a href="#" class="dropdown-item"><i class="icon-stars"></i> Rate trainer</a>
-													</div>
-												</div>
-											</div>
-										</li>
-
-										<li class="media">
-											<a href="#" class="mr-3">
-												<img src="../../../../global_assets/images/demo/users/face14.jpg" width="36" height="36" class="rounded-circle" alt="">
-											</a>
-
-											<div class="media-body">
-												<div class="font-weight-semibold">Vince Satmann</div>
-												<span class="font-size-sm text-muted">UX expert</span>
-											</div>
-
-											<div class="ml-3 align-self-center">
-												<div class="dropdown">
-													<a href="#" class="text-default dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-more2"></i></a>
-													<div class="dropdown-menu dropdown-menu-right">
-														<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Start chat</a>
-														<a href="#" class="dropdown-item"><i class="icon-phone2"></i> Make a call</a>
-														<a href="#" class="dropdown-item"><i class="icon-mail5"></i> Send mail</a>
-														<div class="dropdown-divider"></div>
-														<a href="#" class="dropdown-item"><i class="icon-stars"></i> Rate trainer</a>
-													</div>
-												</div>
-											</div>
-										</li>
-
-										<li class="media">
-											<a href="#" class="mr-3">
-												<img src="../../../../global_assets/images/demo/users/face24.jpg" width="36" height="36" class="rounded-circle" alt="">
-											</a>
-
-											<div class="media-body">
-												<div class="font-weight-semibold">Jason Leroy</div>
-												<span class="font-size-sm text-muted">SEO specialist</span>
-											</div>
-
-											<div class="ml-3 align-self-center">
-												<div class="dropdown">
-													<a href="#" class="text-default dropdown-toggle caret-0" data-toggle="dropdown"><i class="icon-more2"></i></a>
-													<div class="dropdown-menu dropdown-menu-right">
-														<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Start chat</a>
-														<a href="#" class="dropdown-item"><i class="icon-phone2"></i> Make a call</a>
-														<a href="#" class="dropdown-item"><i class="icon-mail5"></i> Send mail</a>
-														<div class="dropdown-divider"></div>
-														<a href="#" class="dropdown-item"><i class="icon-stars"></i> Rate trainer</a>
-													</div>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- /assigned users -->
-
-
-							<!-- Upcoming courses -->
-							<div class="card">
-								<div class="card-header bg-transparent header-elements-inline">
-									<span class="text-uppercase font-size-sm font-weight-semibold">Upcoming courses</span>
-									<div class="header-elements">
-										<div class="list-icons">
-					                		<a class="list-icons-item" data-action="collapse"></a>
-				                		</div>
-			                		</div>
-								</div>
-
-								<div class="card-body">
-									<ul class="media-list">
-										<li class="media">
-											<div class="mr-3">
-												<h5 class="text-center text-success mb-0">02</h5>
-												<div class="font-size-sm text-muted line-height-1">Nov</div>												
-											</div>
-
-											<div class="media-body">
-												<span class="font-weight-semibold">Web development strategy</span> course by <a href="#">James Franko</a>
-												<ul class="list-inline list-inline-dotted mt-1 mb-0">
-													<li class="list-inline-item"><span class="text-muted">120 hours</span></li>
-													<li class="list-inline-item">
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-half font-size-base text-warning-300"></i>
-													</li>
-												</ul>
-											</div>
-										</li>
-
-										<li class="media">
-											<div class="mr-3">
-												<h5 class="text-center text-success mb-0">15</h5>
-												<div class="font-size-sm text-muted line-height-1">Nov</div>												
-											</div>
-
-											<div class="media-body">
-												<span class="font-weight-semibold">Business development</span> course by <a href="#">Jeremy Victorino</a>
-												<ul class="list-inline list-inline-dotted mt-1 mb-0">
-													<li class="list-inline-item"><span class="text-muted">40 hours</span></li>
-													<li class="list-inline-item">
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-half font-size-base text-warning-300"></i>
-													</li>
-												</ul>
-											</div>
-										</li>
-
-										<li class="media">
-											<div class="mr-3">
-												<h5 class="text-center text-success mb-0">01</h5>
-												<div class="font-size-sm text-muted line-height-1">Dec</div>												
-											</div>
-
-											<div class="media-body">
-												<span class="font-weight-semibold">Digital marketing</span> course by <a href="#">Monica Smith</a>
-												<ul class="list-inline list-inline-dotted mt-1 mb-0">
-													<li class="list-inline-item"><span class="text-muted">100 hours</span></li>
-													<li class="list-inline-item">
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-													</li>
-												</ul>
-											</div>
-										</li>
-
-										<li class="media">
-											<div class="mr-3">
-												<h5 class="text-center text-success mb-0">15</h5>
-												<div class="font-size-sm text-muted line-height-1">Dec</div>												
-											</div>
-
-											<div class="media-body">
-												<span class="font-weight-semibold">User experience design</span> course by <a href="#">Buzz Brenson</a>
-												<ul class="list-inline list-inline-dotted mt-1 mb-0">
-													<li class="list-inline-item"><span class="text-muted">90 hours</span></li>
-													<li class="list-inline-item">
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-empty3 font-size-base text-warning-300"></i>
-														<i class="icon-star-half font-size-base text-warning-300"></i>
-													</li>
-												</ul>
-											</div>
-										</li>
-
-										<li class="media">
-											<div class="mr-3">
-												<h5 class="text-center text-success mb-0">20</h5>
-												<div class="font-size-sm text-muted line-height-1">Dec</div>												
-											</div>
-
-											<div class="media-body">
-												<span class="font-weight-semibold">Digital painting</span> course by <a href="#">Zachary Willson</a>
-												<ul class="list-inline list-inline-dotted mt-1 mb-0">
-													<li class="list-inline-item"><span class="text-muted">120 hours</span></li>
-													<li class="list-inline-item">
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-													</li>
-												</ul>
-											</div>
-										</li>
-
-										<li class="media">
-											<div class="mr-3">
-												<h5 class="text-center text-success mb-0">04</h5>
-												<div class="font-size-sm text-muted line-height-1">Jan</div>												
-											</div>
-
-											<div class="media-body">
-												<span class="font-weight-semibold">Financial analysis</span> course by <a href="#">Dori Laperriere</a>
-												<ul class="list-inline list-inline-dotted mt-1 mb-0">
-													<li class="list-inline-item"><span class="text-muted">60 hours</span></li>
-													<li class="list-inline-item">
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-														<i class="icon-star-full2 font-size-base text-warning-300"></i>
-													</li>
-												</ul>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<!-- /upcoming courses -->
-
-						</div>
-						<!-- /sidebar content -->
-
 				</div>
-				<!-- /right sidebar component -->
+				<!-- /sidebar content -->
 
-			</div>
-			<!-- /inner container -->
-			
 		</div>
-		<!-- /content area -->
+		<!-- /right sidebar component -->
 
+			
+			
+		
 	</div>
 	<!-- /main content -->
 
@@ -2066,4 +1492,4 @@ $(function() {
 </script> 
 
 </body>
-</html> 
+</html>
